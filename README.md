@@ -33,12 +33,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
       <td></td>
     </tr>
     <tr>
-      <td>exit</td>
-      <td>退出引导</td>
-      <td>func</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>goToStepNumber</td>
       <td>跳转到第x引导步骤</td>
       <td>func | (stepId: number)</td>
