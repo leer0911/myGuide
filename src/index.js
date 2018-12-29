@@ -1,5 +1,5 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import guide from './guide';
-console.log(guide);
-ReactDOM.render(<div>Welcome</div>, document.getElementById('root'));
+import Garden from './garden/index';
+
+ReactDOM.render(<Garden />, document.getElementById('root'));

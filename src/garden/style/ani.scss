@@ -1,0 +1,43 @@
+@keyframes bounceIn {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  20% {
+    transform: scale3d(1, 0.97, 0.97);
+  }
+
+  30% {
+    transform: scale3d(1, 1.03, 1.03);
+  }
+
+  40% {
+    transform: scale3d(1, 0.95, 0.95);
+  }
+
+  60% {
+    transform: scale3d(1, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(1, 0.99, 0.99);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes bottleMove {
+  0% {
+    transform: none;
+  }
+  80% {
+    transform: translate3d(-100%, -700%, 0) rotate(-40deg);
+  }
+}

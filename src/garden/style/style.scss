@@ -1,0 +1,235 @@
+@import './ani.scss';
+
+$vw_fontsize: 75;
+$vw_design: 750;
+
+@function rem($px) {
+  @return ($px / $vw_fontsize / 2) * 1rem;
+}
+html {
+  font-size: ($vw_fontsize / ($vw_design / 2)) * 100vw !important;
+  @media screen and (max-width: 320px) {
+    font-size: 64px;
+  }
+  @media screen and (min-width: 540px) {
+    font-size: 108px;
+  }
+}
+
+// 用于取消 position:fixed 生成的 z-index 上下文
+.am-modal-popup {
+  position: absolute;
+}
+
+.am-modal-wrap {
+  position: absolute;
+}
+
+.graden-container {
+  background: url('../images/fruiterBgNoon.png') no-repeat center/cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  .top-msg {
+    background: url('../images/recordBubblePanel.png') no-repeat center/cover;
+    width: rem(389);
+    height: rem(64);
+    top: 0;
+    left: -50%;
+    transform: translate(50%, 0);
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    .top-msg-box {
+      overflow: hidden;
+      width: rem(370);
+      height: rem(40);
+      position: relative;
+      .top-msg-wrap {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      .top-msg-item {
+        list-style: none;
+        height: rem(40);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.water-list {
+  &-wrap {
+    height: 60px;
+    overflow: hidden;
+    margin: 10px 8px;
+  }
+  &-box {
+    height: 100%;
+  }
+  &-txt {
+    height: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    color: #333;
+  }
+  &-des {
+    color: #999;
+  }
+  &-btn {
+    width: 100px;
+    margin-left: 8px;
+  }
+}
+.checkin {
+  &-wrap {
+    .am-modal-transparent {
+      width: 100%;
+      height: 400px;
+      margin: 0 20px;
+    }
+    .am-modal-body {
+      overflow: auto;
+    }
+    .am-modal-content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+.water-log {
+  .am-modal-transparent {
+    width: 100%;
+    height: 400px;
+    margin: 0 20px;
+  }
+  .am-modal-body {
+    overflow: auto;
+  }
+  .am-modal-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .user-ava {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .user-lv-img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.tree {
+  &-wrap {
+    width: 100%;
+    height: rem(500);
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  &-bottom {
+    width: rem(424);
+    height: rem(220);
+    background: url('../images/health_good_land_v2.png') no-repeat
+      center/contain;
+  }
+  &-click {
+    width: rem(428);
+    height: rem(508);
+    background: url('../images/tree/bigTree_v3.png') no-repeat center/contain;
+    position: absolute;
+    bottom: rem(80);
+  }
+  &-clicking {
+    transform-origin: bottom center;
+    animation: bounceIn 1s alternate;
+  }
+}
+
+.water-list-click {
+  background: url('../images/getWater_v3.png') no-repeat center/contain;
+  width: rem(112);
+  height: rem(110);
+  bottom: rem(200);
+  left: rem(20);
+  position: absolute;
+}
+.water-log-click {
+  width: rem(102);
+  height: rem(104);
+  background: url('../images/message_v3.png') no-repeat center/contain;
+  top: rem(100);
+  right: rem(20);
+  position: absolute;
+}
+.checkin-click {
+  width: rem(112);
+  height: rem(110);
+  background: url('../images/help-icon-gain.png') no-repeat center/contain;
+  top: rem(100);
+  left: rem(20);
+  position: absolute;
+}
+
+.bottle {
+  &-wrap {
+    width: rem(130);
+    height: rem(100);
+    position: absolute;
+    right: rem(20);
+    bottom: rem(200);
+  }
+  &-click {
+    width: rem(130);
+    height: rem(100);
+    background: url('../images/wateringBottle_Friend.png') no-repeat
+      center/contain;
+    position: absolute;
+  }
+  &-clicking {
+    transform-origin: bottom center;
+    animation: bottleMove 4s alternate;
+  }
+  &-num {
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: -50%;
+    transform: translate(50%, -150%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+  }
+}
+
+.grow {
+  &-wrap {
+    position: absolute;
+    bottom: rem(250);
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+  }
+}

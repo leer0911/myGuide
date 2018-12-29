@@ -23,9 +23,6 @@ const defaultOptions = {
   positionPrecedence: ['bottom', 'top', 'right', 'left'],
   disableInteraction: false,
   helperElementPadding: 10,
-  hintPosition: 'top-middle',
-  hintButtonLabel: 'Got it',
-  hintAnimation: true,
   buttonClass: 'introjs-button'
 };
 
